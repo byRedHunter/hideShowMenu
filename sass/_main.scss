@@ -1,0 +1,141 @@
+main {
+    overflow: hidden;
+    .main-fondo {
+        height: 85vh;
+        width: 100%;
+        background: $color-rosa url('../img/main.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        .main-texto {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            h1 {
+                width: 100%;
+                font-size: $texto-size * 1.8;
+            }
+            span {
+                position: absolute;
+                padding-top: 20px;
+                margin-left: auto;
+                margin-top: auto;
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        .main-redes-sociales {
+            display: flex;
+            .rs-tipo {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    font-size: 20px;
+                    animation: agrandar 4s linear infinite;
+                }
+                @keyframes agrandar {
+                    from {
+                        opacity: 0;
+                        transform: scale(0);
+                    }
+                    70% {
+                        transform: scale(1.4);
+                    }
+                    90% {
+                        transform: scale(0.8);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: scale(0.5);
+                    }
+                }
+            }
+            & .youtube {
+                background: #b32727;
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+                transition: all ease-in .5s;
+                &:hover {
+                    background: #d32d2d;
+                }
+            }
+            & .twitter {
+                background: #1da1f2;
+                transition: all ease-in .5s;
+                &:hover {
+                    background: #1ca8ff;
+                }
+            }
+            & .github {
+                background: #24292e;
+                transition: all ease-in .5s;
+                &:hover {
+                    background: #363d44;
+                }
+            }
+            & .instagram {
+                background: #c32aa3;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+                transition: all ease-in .5s;
+                &:hover {
+                    background: #db2eb6;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        .container {
+            .main-texto {
+                h1 {
+                    font-size: $texto-size * 2.2;
+                }
+                span {
+                    font-size: 20px;
+                }
+            }
+    
+            .main-redes-sociales {
+                .rs-tipo {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        .container {
+            .main-texto {
+                h1 {
+                    font-size: $texto-size * 2.4;
+                }
+                span {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

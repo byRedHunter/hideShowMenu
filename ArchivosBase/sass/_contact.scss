@@ -1,0 +1,134 @@
+
+.contacto {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .contacto-left {
+        background-color: rgb(66, 63, 63);
+        width: 100%;
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        .cl-up {
+            width: 70%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            i {
+                font-size: 80px;
+            }
+            h3 {
+                font-weight: bolder;
+                font-size: 22px;
+                text-transform: uppercase;
+            }
+        }
+        .cl-down {
+            width: 70%;
+            div {
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 10px;
+                i {
+                    font-size: $texto-size + 4;
+                }
+            }
+        }
+    }
+    .contacto-right {
+        background-color: $color-rosa;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .cr-title {
+            width: 90%;
+            font-size: $texto-size * 1.3;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-top: 15px;
+            font-family: $texto-titulo;
+        }
+        form {
+            width: 90%;
+            input[type=text],
+            input[type=email],
+            textarea {
+                outline: none;
+                border: transparent;
+                background: none;
+                border-bottom: 2.5px solid $color-verde;
+                width: 100%;
+                padding: 5px;
+                font-size: 18px;
+                letter-spacing: 1.2px;
+            }
+            textarea {
+                height: 120px;
+            }
+            .form-group {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 20px;
+                label {
+                    width: 100%;
+                }
+            }
+            input[type=submit] {
+                text-align: center;
+                font-size: 16px;
+                padding: 8px 15px;
+                line-height: 22px;
+                border: 0.5px solid #ccc;
+                border-radius: 8px;
+                background-color: $color-rojo;
+                color: $color-white;
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contacto {
+        .contacto-left {
+            width: 45%;
+            height: 550px;
+            .cl-up {
+                width: 70%;
+                height: 40%;
+            }
+            .cl-down {
+                width: 80%;
+            }
+        }
+        .contacto-right {
+            width: 55%;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .contacto {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        .contacto-left {
+            width: 40%;
+            .cl-down {
+                width: 60%;
+            }
+        }
+        .contacto-right {
+            width: 60%;
+        }
+    }
+}

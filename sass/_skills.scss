@@ -1,0 +1,37 @@
+.section-skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    p {
+        width: 100%;
+    }
+    .skills {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .skill {
+            width: 100%;
+            .skill-label {
+                padding: 5px 5px 5px 2px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-skills {
+        p {
+            width: 80%;
+        }
+        .skills {
+            justify-content: space-between;
+            .skill {
+                width: 46%;
+            }
+        }
+    }
+}
